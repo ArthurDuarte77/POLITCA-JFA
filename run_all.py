@@ -17,86 +17,86 @@ import pandas as pd
 from selenium.common.exceptions import *
 import re
 
-# service = Service()
-# options = webdriver.ChromeOptions()
-# titulo_arquivo = ""
-# # options.add_argument("--headless=new")
+service = Service()
+options = webdriver.ChromeOptions()
+titulo_arquivo = ""
+# options.add_argument("--headless=new")
 
-# options.add_argument("--disable-gpu")
-# options.add_argument("--disable-extensions")
-# prefs = {"profile.managed_default_content_settings.images": 2}
-# options.add_experimental_option("prefs", prefs)
+options.add_argument("--disable-gpu")
+options.add_argument("--disable-extensions")
+prefs = {"profile.managed_default_content_settings.images": 2}
+options.add_experimental_option("prefs", prefs)
 
 
-# driver = webdriver.Chrome(service=service, options=options)
+driver = webdriver.Chrome(service=service, options=options)
 
-# def load_cookies(driver, cookies_file):
-#     with open(cookies_file, 'r') as file:
-#         cookies = json.load(file)
+def load_cookies(driver, cookies_file):
+    with open(cookies_file, 'r') as file:
+        cookies = json.load(file)
     
-#     # Primeiro, navegue para o domínio para o qual os cookies são válidos
-#     driver.get("https://www.mercadolivre.com.br")
+    # Primeiro, navegue para o domínio para o qual os cookies são válidos
+    driver.get("https://www.mercadolivre.com.br")
     
-#     for cookie in cookies:
-#         # Alguns browsers só aceitam certos campos do cookie
-#         cookie_dict = {
-#             'name': cookie['name'],
-#             'value': cookie['value'],
-#             'domain': cookie['domain'],
-#             'path': cookie['path'],
-#         }
-#         # Adicione campos opcionais se estiverem presentes
-#         if 'expiry' in cookie:
-#             cookie_dict['expiry'] = int(cookie['expirationDate'])
-#         if 'secure' in cookie:
-#             cookie_dict['secure'] = cookie['secure']
-#         if 'httpOnly' in cookie:
-#             cookie_dict['httpOnly'] = cookie['httpOnly']
+    for cookie in cookies:
+        # Alguns browsers só aceitam certos campos do cookie
+        cookie_dict = {
+            'name': cookie['name'],
+            'value': cookie['value'],
+            'domain': cookie['domain'],
+            'path': cookie['path'],
+        }
+        # Adicione campos opcionais se estiverem presentes
+        if 'expiry' in cookie:
+            cookie_dict['expiry'] = int(cookie['expirationDate'])
+        if 'secure' in cookie:
+            cookie_dict['secure'] = cookie['secure']
+        if 'httpOnly' in cookie:
+            cookie_dict['httpOnly'] = cookie['httpOnly']
 
-#         driver.add_cookie(cookie_dict)
+        driver.add_cookie(cookie_dict)
 
-# def cupom(driver, count=0):
-#     driver.get(f"https://www.mercadolivre.com.br/cupons/filter?category=acc_vertical&page={count}")
+def cupom(driver, count=0):
+    driver.get(f"https://www.mercadolivre.com.br/cupons/filter?category=acc_vertical&page={count}")
     
-#     counter = 0
-#     while True:
-#         test = driver.find_elements(By.XPATH, '/html/body/main/div/div/div[2]/div/div[1]')
-#         if test:
-#             break
-#         else:
-#             counter += 1
-#             if counter > 20:
-#                 break;
-#             time.sleep(0.5)
-#     script = '''
-#     var botoes = document.evaluate(
-#         '//*[@class="andes-button andes-button--small andes-button--loud"]',
-#         document,
-#         null,
-#         XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
-#         null
-#     );
+    counter = 0
+    while True:
+        test = driver.find_elements(By.XPATH, '/html/body/main/div/div/div[2]/div/div[1]')
+        if test:
+            break
+        else:
+            counter += 1
+            if counter > 20:
+                break;
+            time.sleep(0.5)
+    script = '''
+    var botoes = document.evaluate(
+        '//*[@class="andes-button andes-button--small andes-button--loud"]',
+        document,
+        null,
+        XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
+        null
+    );
 
-#     for (var i = 0; i < botoes.snapshotLength; i++) {
-#         var botao = botoes.snapshotItem(i);
-#         botao.click();
-#         console.log('Clicou no botão:', botao);
-#     }
-#     '''
+    for (var i = 0; i < botoes.snapshotLength; i++) {
+        var botao = botoes.snapshotItem(i);
+        botao.click();
+        console.log('Clicou no botão:', botao);
+    }
+    '''
     
-#     driver.execute_script(script)
-#     time.sleep(2)
-#     try:
-#         next_button = driver.find_element(By.XPATH, '//a[@title="Seguinte"]')
-#         count += 1
-#         cupom(driver, count)
-#     except (NoSuchElementException, TimeoutException):
-#         print("Não há mais páginas para processar.")
-# try:
-#     load_cookies(driver, 'cookies.json')
-#     cupom(driver)
-# finally:
-#     driver.quit()
+    driver.execute_script(script)
+    time.sleep(2)
+    try:
+        next_button = driver.find_element(By.XPATH, '//a[@title="Seguinte"]')
+        count += 1
+        cupom(driver, count)
+    except (NoSuchElementException, TimeoutException):
+        print("Não há mais páginas para processar.")
+try:
+    load_cookies(driver, 'cookies.json')
+    cupom(driver)
+finally:
+    driver.quit()
 
 is_cupom = ""
 # def com_cupom():
