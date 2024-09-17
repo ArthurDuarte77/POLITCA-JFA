@@ -124,7 +124,7 @@ def read_text(text):
 
 
 def format_item(item):
-    formatted_item = f"{item['Cupom']}  {item['Loja']} – {item['Lugar']} – Preço Anúncio: R$ {item['Preço']} – Preço Política: R$ {item['Preço Previsto']} ({item['Tipo']})\n{item['URL']}\n"
+    formatted_item = f"{item['Cupom']}  {item['Loja']} – {item['Lugar']} – PreçoAnúncio: R$ {item['Preço']} – Preço Política: R$ {item['Preço Previsto']} ({item['Tipo']}) {item['URL']}\n"
     return formatted_item
 
 def format_item_dif(item):
@@ -192,7 +192,7 @@ for item in storm200:
         lojas[item[1]] = []
     lojas[item[1]].append((item[0], "FONTE 200A"))
 for i in lojas:
-    output_doc.add_paragraph().add_run(f"*{i}*\n").bold = True
+    output_doc.add_paragraph().add_run(f"*{i}*").bold = True
     for item, modelo in lojas[i]:
         output_doc.add_paragraph(f"{modelo} - {item}").paragraph_format.left_indent = Inches(0.5)
         
