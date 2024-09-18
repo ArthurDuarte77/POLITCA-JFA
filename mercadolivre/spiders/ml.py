@@ -262,16 +262,18 @@ class MlSpider(scrapy.Spider):
         
         # yield scrapy.Request(url=f"https://lista.mercadolivre.com.br/acessorios-veiculos/{search}_OrderId_PRICE_NoIndex_True", callback=self.parse_all)BRAND_22292586
         # yield scrapy.Request(url=f"https://lista.mercadolivre.com.br/acessorios-veiculos/{search}_Frete_Full_OrderId_PRICE_NoIndex_True", callback=self.parse_all)
-        yield scrapy.Request(url=f"https://lista.mercadolivre.com.br/acessorios-veiculos/{search}_Frete_Full_OrderId_PRICE_BRAND_2466336_NoIndex_True", cookies=self.cookies, callback=self.parse_all)
-        yield scrapy.Request(url=f"https://lista.mercadolivre.com.br/acessorios-veiculos/{search}_OrderId_PRICE_BRAND_2466336_NoIndex_True", cookies=self.cookies, callback=self.parse_all)
-        yield scrapy.Request(url=f"https://lista.mercadolivre.com.br/acessorios-veiculos/{search}_Frete_Full_OrderId_PRICE_BRAND_22292586_NoIndex_True", cookies=self.cookies, callback=self.parse_all)
-        yield scrapy.Request(url=f"https://lista.mercadolivre.com.br/acessorios-veiculos/{search}_OrderId_PRICE_BRAND_22292586_NoIndex_True", cookies=self.cookies, callback=self.parse_all)
+        yield scrapy.Request(url=f"https://lista.mercadolivre.com.br/acessorios-veiculos/{search}_Frete_Full_OrderId_PRICE_BRAND_2466336_NoIndex_True", callback=self.parse_all)
+        yield scrapy.Request(url=f"https://lista.mercadolivre.com.br/acessorios-veiculos/{search}_OrderId_PRICE_BRAND_2466336_NoIndex_True", callback=self.parse_all)
+        yield scrapy.Request(url=f"https://lista.mercadolivre.com.br/acessorios-veiculos/{search}_Frete_Full_OrderId_PRICE_BRAND_22292586_NoIndex_True", callback=self.parse_all)
+        yield scrapy.Request(url=f"https://lista.mercadolivre.com.br/acessorios-veiculos/{search}_OrderId_PRICE_BRAND_22292586_NoIndex_True", callback=self.parse_all)
         
     
     def parse_all(self, response):
         
         for item in response.xpath('//div/div[3]/section/ol/li[@class="ui-search-layout__item shops__layout-item ui-search-layout__stack"]'):
             new_name = item.xpath('.//h2[@class="ui-search-item__title"]/text()').get()
+            if not new_name:
+                new_name = item.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element"]/a/text()').get()
             name = new_name
             price = extract_price_new(response=item)
             if not price:
@@ -294,9 +296,14 @@ class MlSpider(scrapy.Spider):
             elif item.xpath('.//span[@class="ui-search-item__group__element ui-search-installments ui-search-color--LIGHT_GREEN"]').get():
                 listing_type = "Premium"
             url = item.xpath('.//div/div/div[2]/div[1]/a[@class="ui-search-item__group__element ui-search-link__title-card ui-search-link"]/@href').get()
+            if not new_name:
+                print(response.url)
+                continue
             new_name = unidecode.unidecode(new_name.lower())
             if not url:
                 url = item.xpath('.//a[@class="ui-search-item__group__element ui-search-link__title-card ui-search-link"]/@href').get()
+            if not url:
+                url = item.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element"]/a/@href').get()
             if "taramps" in new_name or "stetson" in new_name or "usina" in new_name or "controle" in new_name:
                 continue
             if self.option_selected == "FONTE 40A":     
@@ -309,7 +316,7 @@ class MlSpider(scrapy.Spider):
                         elif listing_type == "Premium" and price and cupom == "":
                             if self.option_selected == "FONTE 40A" and price >= fonte40Premium:
                                 continue;
-                        yield scrapy.Request(url=url, callback=self.parse_product, cookies=self.cookies, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-40a-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-40a_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-40a_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -326,7 +333,7 @@ class MlSpider(scrapy.Spider):
                         elif listing_type == "Premium" and price and cupom == "":
                             if self.option_selected == "FONTE 60A" and price >= fonte60Premium:
                                 continue;
-                        yield scrapy.Request(url=url, callback=self.parse_product, cookies=self.cookies, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-60a-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-60a_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-60a_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -343,7 +350,7 @@ class MlSpider(scrapy.Spider):
                         elif listing_type == "Premium" and price and cupom == "":
                             if self.option_selected == "FONTE 60A LITE" and price >= fonte60litePremium:
                                 continue;
-                        yield scrapy.Request(url=url, callback=self.parse_product, cookies=self.cookies, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-60a-lite-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-60a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-60a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -361,7 +368,7 @@ class MlSpider(scrapy.Spider):
                         elif listing_type == "Premium" and price and cupom == "":
                             if self.option_selected == "FONTE 70A" and price >= fonte70Premium:
                                 continue;
-                        yield scrapy.Request(url=url, callback=self.parse_product, cookies=self.cookies, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-70a-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-70a_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-70a_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -380,7 +387,7 @@ class MlSpider(scrapy.Spider):
                         elif listing_type == "Premium" and price and cupom == "":
                             if self.option_selected == "FONTE 70A LITE" and price >= fonte70litePremium:
                                 continue;
-                        yield scrapy.Request(url=url, callback=self.parse_product, cookies=self.cookies, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-70a-lite-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-70a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-70a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -399,7 +406,7 @@ class MlSpider(scrapy.Spider):
                         elif listing_type == "Premium" and price and cupom == "":
                             if self.option_selected == "FONTE 90 BOB" and price >= fonte90bobPremium:
                                 continue;
-                        yield scrapy.Request(url=url, callback=self.parse_product, cookies=self.cookies, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-90a-bob-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-90a-bob_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-90a-bob_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -418,7 +425,7 @@ class MlSpider(scrapy.Spider):
                         elif listing_type == "Premium" and price and cupom == "":
                             if self.option_selected == "FONTE 120A" and price >= fonte120Premium:
                                 continue;
-                        yield scrapy.Request(url=url, callback=self.parse_product, cookies=self.cookies, meta={'name': name, 'loja': loja, 'price':price,'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price,'listing_type': listing_type, 'cupom': cupom})
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-120a-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-120a_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-120a_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -437,7 +444,7 @@ class MlSpider(scrapy.Spider):
                         elif listing_type == "Premium" and price and cupom == "":
                             if self.option_selected == "FONTE 120A LITE" and price >= fonte120litePremium:
                                 continue;
-                        yield scrapy.Request(url=url, callback=self.parse_product, cookies=self.cookies, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-120a-lite-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-120a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-120a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -456,7 +463,7 @@ class MlSpider(scrapy.Spider):
                         elif listing_type == "Premium" and price and cupom == "":
                             if self.option_selected == "FONTE 120 BOB" and price >= fonte120bobPremium:
                                 continue;
-                        yield scrapy.Request(url=url, callback=self.parse_product, cookies=self.cookies, meta={'name': name, 'loja': loja, 'price':price,'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price,'listing_type': listing_type, 'cupom': cupom})
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-120a-bob-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-120a-bob_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-120a-bob_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -475,7 +482,7 @@ class MlSpider(scrapy.Spider):
                         elif listing_type == "Premium" and price and cupom == "":
                             if self.option_selected == "FONTE 200A" and price >= fonte200Premium:
                                 continue;
-                        yield scrapy.Request(url=url, callback=self.parse_product, cookies=self.cookies, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-200a-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-200a_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-200a_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -494,7 +501,7 @@ class MlSpider(scrapy.Spider):
                         elif listing_type == "Premium" and price and cupom == "":
                             if self.option_selected == "FONTE 200 MONO" and price >= fonte200monoPremium:
                                 continue;
-                        yield scrapy.Request(url=url, callback=self.parse_product, cookies=self.cookies, meta={'name': name, 'loja': loja, 'price':price,'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price,'listing_type': listing_type, 'cupom': cupom})
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-200a-mono-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-200a-mono_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-200a-mono_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -512,7 +519,7 @@ class MlSpider(scrapy.Spider):
                         elif listing_type == "Premium" and price and cupom == "":
                             if self.option_selected == "FONTE 200A LITE" and price >= fonte200litePremium:
                                 continue;
-                        yield scrapy.Request(url=url, callback=self.parse_product, cookies=self.cookies, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-200a-lite-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-200a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-200a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -530,7 +537,7 @@ class MlSpider(scrapy.Spider):
                         elif listing_type == "Premium" and price and cupom == "":
                             if self.option_selected == "FONTE 200 BOB" and price >= fonte200bobPremium:
                                 continue;
-                        yield scrapy.Request(url=url, callback=self.parse_product, cookies=self.cookies, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-200a-bob-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-200a-bo_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-200a-bo_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -558,6 +565,17 @@ class MlSpider(scrapy.Spider):
         tipo = listing_type
             
         location_url = f'https://www.mercadolivre.com.br/perfil/{loja.replace(" ", "+")}'
+        
+
+        for i in response.xpath('//section/div[2]/div/div/div/div[1]/div/table/tbody/tr'):
+            if i.xpath('.//th/div[@class="andes-table__header__container"]/text()').get().lower() == "modelo" or i.xpath('.//th/div[@class="andes-table__header__container"]/text()').get().lower() == "linha":
+                modelo = i.xpath('.//td/span/text()').get()
+                if modelo:
+                    modelo = modelo.lower()
+                    if self.option_selected:
+                        if self.option_selected == "FONTE 200A":
+                            if "bob" in modelo:
+                                return
 
         yield scrapy.Request(url=location_url, callback=self.parse_location, meta={'link_cupom': link,'url': response.url, 'name': name, 'price': new_price_float, 'qtde_parcelado': 0, 'price_parcelado': 0, 'loja': loja, 'tipo': tipo, 'cupom': cupom})
 
@@ -619,13 +637,12 @@ class MlSpider(scrapy.Spider):
         loja = "RADICALSOM"
         lugar = "Artur nogueira, São Paulo."
         for i in response.xpath('//*[@id="root-app"]/div/div[3]/section/ol/li'):
-            nomeFonte = i.xpath('.//div/div/div/div/a/h2/text()').get()
+            nomeFonte = i.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element shops__items-group-details shops__item-title"]/a/text()').get()
             price = i.xpath('.//div/div/div[3]/div/div[1]/div/div/div/div/span/span[2]/text()').get()
             cents = i.xpath('.//div/div/div[3]/div/div[1]/div/div/div/div/span/span[4]/text()').get()
-            url = i.xpath('.//div/div/div[3]/div[2]/a/@href').get()
+            url = i.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element shops__items-group-details shops__item-title"]/a/@href').get()
             if not url:
                 url = i.xpath('.//a[@class="ui-search-item__group__element ui-search-link__title-card shops__items-group-details ui-search-link"]/@href').get()
-            
             nomeFonte = nomeFonte.lower()
             nomeFonte = unidecode.unidecode(nomeFonte)
             if not cents:
@@ -710,10 +727,10 @@ class MlSpider(scrapy.Spider):
         loja = "LS DISTRIBUIDORA"
         lugar = "Elísio Medrado, Bahia"
         for i in response.xpath('//*[@id="root-app"]/div/div[3]/section/ol/li'):
-            nomeFonte = i.xpath('.//div/div/div/div/a/h2/text()').get()
+            nomeFonte = i.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element shops__items-group-details shops__item-title"]/a/text()').get()
             price = i.xpath('.//div/div/div[3]/div/div[1]/div/div/div/div/span/span[2]/text()').get()
             cents = i.xpath('.//div/div/div[3]/div/div[1]/div/div/div/div/span/span[4]/text()').get()
-            url = i.xpath('.//div/div/div[3]/div[2]/a/@href').get()
+            url = i.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element shops__items-group-details shops__item-title"]/a/@href').get()
             if not url:
                 url = i.xpath('.//a[@class="ui-search-item__group__element ui-search-link__title-card shops__items-group-details ui-search-link"]/@href').get()
             nomeFonte = nomeFonte.lower()
@@ -800,13 +817,12 @@ class MlSpider(scrapy.Spider):
         loja = "BESTONLINE"
         lugar = "Rosario, Santa Fe."
         for i in response.xpath('//li[@class="ui-search-layout__item shops__layout-item shops__layout-item ui-search-layout__stack"]'):
-            nomeFonte = i.xpath('.//div/div/div/div/a/h2/text()').get()
+            nomeFonte = i.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element shops__items-group-details shops__item-title"]/a/text()').get()
             price = i.xpath('.//div/div/div[3]/div/div[1]/div/div/div/div/span/span[2]/text()').get()
             cents = i.xpath('.//div/div/div[3]/div/div[1]/div/div/div/div/span/span[4]/text()').get()
-            url = i.xpath('.//div/div/div[3]/div[2]/a/@href').get()
+            url = i.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element shops__items-group-details shops__item-title"]/a/@href').get()
             if not url:
                 url = i.xpath('.//a[@class="ui-search-item__group__element ui-search-link__title-card shops__items-group-details ui-search-link"]/@href').get()
-            
             nomeFonte = nomeFonte.lower()
             nomeFonte = unidecode.unidecode(nomeFonte)
             if not cents:
@@ -891,13 +907,12 @@ class MlSpider(scrapy.Spider):
         loja = "RENOV ONLINE"
         lugar = "São João da Boa Vista - SP"
         for i in response.xpath('//li[@class="ui-search-layout__item shops__layout-item shops__layout-item ui-search-layout__stack"]'):
-            nomeFonte = i.xpath('.//div/div/div/div/a/h2/text()').get()
+            nomeFonte = i.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element shops__items-group-details shops__item-title"]/a/text()').get()
             price = i.xpath('.//div/div/div[3]/div/div[1]/div/div/div/div/span/span[2]/text()').get()
             cents = i.xpath('.//div/div/div[3]/div/div[1]/div/div/div/div/span/span[4]/text()').get()
-            url = i.xpath('.//div/div/div[3]/div[1]/a/@href').get()
+            url = i.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element shops__items-group-details shops__item-title"]/a/@href').get()
             if not url:
                 url = i.xpath('.//a[@class="ui-search-item__group__element ui-search-link__title-card shops__items-group-details ui-search-link"]/@href').get()
-            
             nomeFonte = nomeFonte.lower()
             nomeFonte = unidecode.unidecode(nomeFonte)
             if not cents:
@@ -981,13 +996,12 @@ class MlSpider(scrapy.Spider):
         loja = "SHOPPRATICO"
         lugar = "Sorocaba, São Paulo."
         for i in response.xpath('//li[@class="ui-search-layout__item shops__layout-item shops__layout-item ui-search-layout__stack"]'):
-            nomeFonte = i.xpath('.//div/div/div/div/a/h2/text()').get()
+            nomeFonte = i.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element shops__items-group-details shops__item-title"]/a/text()').get()
             price = i.xpath('.//div/div/div[3]/div/div[1]/div/div/div/div/span/span[2]/text()').get()
             cents = i.xpath('.//div/div/div[3]/div/div[1]/div/div/div/div/span/span[4]/text()').get()
-            url = i.xpath('.//div/div/div[3]/div[2]/a/@href').get()
+            url = i.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element shops__items-group-details shops__item-title"]/a/@href').get()
             if not url:
                 url = i.xpath('.//a[@class="ui-search-item__group__element ui-search-link__title-card shops__items-group-details ui-search-link"]/@href').get()
-            
             nomeFonte = nomeFonte.lower()
             nomeFonte = unidecode.unidecode(nomeFonte)
             if not cents:
@@ -1246,7 +1260,7 @@ class MlSpider(scrapy.Spider):
         lugar = response.xpath('//*[@id="profile"]/div/div[2]/div[1]/div[3]/p/text()').get()
 
         if link != None:
-            yield scrapy.Request(url=link, cookies=self.cookies, callback=self.get_cupom, meta={'url': url, 'name': name, 'price': new_price_float, 'loja': loja, 'tipo': tipo, 'cupom': cupom, 'lugar': lugar, 'parcelado': parcelado})
+            yield scrapy.Request(url=link, callback=self.get_cupom, meta={'url': url, 'name': name, 'price': new_price_float, 'loja': loja, 'tipo': tipo, 'cupom': cupom, 'lugar': lugar, 'parcelado': parcelado})
             
         if not cupom:
             doc.add_paragraph(f'Modelo: {self.option_selected_new}')
@@ -1270,7 +1284,7 @@ class MlSpider(scrapy.Spider):
                 'tipo': tipo,
                 'lugar': lugar
             }
-            # doc.save(fr"dados/{self.option_selected_new}.docx")
+            doc.save(fr"dados/{self.option_selected_new}.docx")
                             
     def get_cupom(self, response):
         url = response.meta['url']

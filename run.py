@@ -1,3 +1,6 @@
+import schedule
+import time
+import subprocess
 from selenium.webdriver.common.keys import Keys
 from collections import defaultdict
 import docx
@@ -47,9 +50,8 @@ while True:
 time.sleep(10)
 driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div[3]/div/div[1]/div/div[2]/button').click()
 time.sleep(1)
-driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div[3]/div/div[1]/div/div[2]/div[2]/div/div/p').send_keys("31 7529-6679")
+driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div[3]/div/div[1]/div/div[2]/div[2]/div/div/p').send_keys("")
 time.sleep(5)
-driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div[3]/div/div[3]/div[1]/div/div/div[2]/div').click()
 
 def extrair_informacoes_por_loja(caminho_arquivo):
     # Carrega o documento Word
@@ -92,11 +94,14 @@ def enviar():
         
 def executar_codigo():
     subprocess.run(['python', 'run_all.py'])
-
-
-while True:
-    executar_codigo()
     enviar()
 
+# Agendar a execução nos horários especificados
+schedule.every().day.at("14:22").do(executar_codigo)
+schedule.every().day.at("11:00").do(executar_codigo)
+schedule.every().day.at("14:30").do(executar_codigo)
+schedule.every().day.at("16:00").do(executar_codigo)
 
-    time.sleep(900)
+while True:
+    schedule.run_pending()
+    time.sleep(60) 
