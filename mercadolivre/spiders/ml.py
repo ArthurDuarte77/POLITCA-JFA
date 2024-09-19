@@ -165,7 +165,8 @@ def extract_price(response):
 def extract_price_new(response):
   price_selectors = [
       './/div/div/div[2]/div[2]/div[1]/div[1]/div/div/div/span[1]/span[@class="andes-money-amount__fraction"]/text()',
-      './/div[1]/div[1]/div/div/div/span[1]/span[@class="andes-money-amount__fraction"]/text()'
+      './/div[1]/div[1]/div/div/div/span[1]/span[@class="andes-money-amount__fraction"]/text()',
+      './/span[@class="andes-money-amount ui-pdp-price__part andes-money-amount--cents-superscript andes-money-amount--compact"]/span[@class="andes-money-amount__fraction"]/text()'
   ]
   
   for selector in price_selectors:
@@ -174,6 +175,9 @@ def extract_price_new(response):
       price = price.replace('.', '')
       decimal_selector = selector.replace('span[@class="andes-money-amount__fraction"]/text()', '') + 'span[@class="andes-money-amount__cents andes-money-amount__cents--superscript-24"]/text()'
       price_decimal = response.xpath(decimal_selector).get()
+      if not price_decimal:  
+        decimal_selector = selector.replace('span[@class="andes-money-amount__fraction"]/text()', '') + 'span[@class="andes-money-amount__cents andes-money-amount__cents--superscript-20"]/text()'
+        price_decimal = response.xpath(decimal_selector).get()
       
       if price_decimal:
         return float(f"{price}.{price_decimal}")
@@ -317,6 +321,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 40A" and price >= fonte40Premium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-40a-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-40a_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-40a_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -334,6 +339,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 60A" and price >= fonte60Premium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-60a-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-60a_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-60a_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -351,6 +357,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 60A LITE" and price >= fonte60litePremium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-60a-lite-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-60a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-60a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -369,6 +376,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 70A" and price >= fonte70Premium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-70a-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-70a_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-70a_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -388,6 +396,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 70A LITE" and price >= fonte70litePremium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-70a-lite-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-70a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-70a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -407,6 +416,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 90 BOB" and price >= fonte90bobPremium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-90a-bob-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-90a-bob_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-90a-bob_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -426,6 +436,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 120A" and price >= fonte120Premium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price,'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-120a-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-120a_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-120a_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -445,6 +456,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 120A LITE" and price >= fonte120litePremium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-120a-lite-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-120a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-120a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -464,6 +476,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 120 BOB" and price >= fonte120bobPremium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price,'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-120a-bob-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-120a-bob_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-120a-bob_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -483,6 +496,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 200A" and price >= fonte200Premium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-200a-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-200a_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-200a_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -502,6 +516,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 200 MONO" and price >= fonte200monoPremium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price,'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-200a-mono-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-200a-mono_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-200a-mono_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -520,6 +535,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 200A LITE" and price >= fonte200litePremium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-200a-lite-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-200a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-200a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -538,6 +554,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 200 BOB" and price >= fonte200bobPremium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
+                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-200a-bob-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-200a-bo_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-200a-bo_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -563,7 +580,8 @@ class MlSpider(scrapy.Spider):
         new_price_float = response.meta["price"]
         
         tipo = listing_type
-            
+          
+        
         location_url = f'https://www.mercadolivre.com.br/perfil/{loja.replace(" ", "+")}'
         
 
@@ -1285,7 +1303,131 @@ class MlSpider(scrapy.Spider):
                 'lugar': lugar
             }
             doc.save(fr"dados/{self.option_selected_new}.docx")
-                            
+         
+    def get_catalog(self, response):
+        for i in response.xpath('//*[@id="buybox-form"]'):
+            price = extract_price_new(response=i)
+            listing_type = ""
+            if "sem juros" in i.xpath('.//p[@class="ui-pdp-family--REGULAR ui-pdp-media__title"]/text()'):
+                listing_type = "Premium"
+            else:
+                listing_type = "Clássico"
+            loja = i.xpath('.//button[@class="ui-pdp-seller__link-trigger-button non-selectable"]/span/text()').get()
+            if (i.xpath('.//div[@class="ui-pdp-actions__container"]/input[@name="item_id"]/@value')):
+                url = response.url.split('/s')[0] + "?pdp_filters=" + i.xpath('.//div[@class="ui-pdp-actions__container"]/input[@name="item_id"]/@value').get()
+            else:
+                print(response.url)
+            if self.option_selected == "FONTE 40A":     
+                if listing_type == "Clássico" and price:
+                    if self.option_selected == "FONTE 40A" and price >= fonte40Classico:
+                        continue;
+                elif listing_type == "Premium" and price:
+                    if self.option_selected == "FONTE 40A" and price >= fonte40Premium:
+                        continue;
+            elif self.option_selected == "FONTE 60A":
+                if listing_type == "Clássico" and price:
+                    if self.option_selected == "FONTE 60A" and price >= fonte60Classico:
+                        continue;
+                elif listing_type == "Premium" and price:
+                    if self.option_selected == "FONTE 60A" and price >= fonte60Premium:
+                        continue;
+                        
+            elif self.option_selected == "FONTE 60A LITE":
+                if listing_type == "Clássico" and price:
+                    if self.option_selected == "FONTE 60A LITE" and price >= fonte60liteClassico:
+                        continue;
+                elif listing_type == "Premium" and price:
+                    if self.option_selected == "FONTE 60A LITE" and price >= fonte60litePremium:
+                        continue;
+            elif self.option_selected == "FONTE 70A":
+                if listing_type == "Clássico" and price:
+                    if self.option_selected == "FONTE 70A" and price >= fonte70Classico:
+                        continue;
+                elif listing_type == "Premium" and price:
+                    if self.option_selected == "FONTE 70A" and price >= fonte70Premium:
+                        continue;
+                        
+                        
+            elif self.option_selected == "FONTE 70A LITE":
+                if listing_type == "Clássico" and price:
+                    if self.option_selected == "FONTE 70A LITE" and price >= fonte70liteClassico:
+                        continue;
+                elif listing_type == "Premium" and price:
+                    if self.option_selected == "FONTE 70A LITE" and price >= fonte70litePremium:
+                        continue;
+                        
+            elif self.option_selected == "FONTE 90 BOB":
+                
+                if listing_type == "Clássico" and price:
+                    if self.option_selected == "FONTE 90 BOB" and price >= fonte90bobClassico:
+                        continue;
+                elif listing_type == "Premium" and price:
+                    if self.option_selected == "FONTE 90 BOB" and price >= fonte90bobPremium:
+                        continue;
+                        
+            elif self.option_selected == "FONTE 120A":
+                if listing_type == "Clássico" and price:
+                    if self.option_selected == "FONTE 120A" and price >= fonte120Classico:
+                        continue;
+                elif listing_type == "Premium" and price:
+                    if self.option_selected == "FONTE 120A" and price >= fonte120Premium:
+                        continue;
+                        
+            elif self.option_selected == "FONTE 120A LITE":
+                if listing_type == "Clássico" and price:
+                    if self.option_selected == "FONTE 120A LITE" and price >= fonte120liteClassico:
+                        continue;
+                elif listing_type == "Premium" and price:
+                    if self.option_selected == "FONTE 120A LITE" and price >= fonte120litePremium:
+                        continue;
+                        
+            elif self.option_selected == "FONTE 120 BOB":
+                if listing_type == "Clássico" and price:
+                    if self.option_selected == "FONTE 120 BOB" and price >= fonte120bobClassico:
+                        continue;
+                elif listing_type == "Premium" and price:
+                    if self.option_selected == "FONTE 120 BOB" and price >= fonte120bobPremium:
+                        continue;
+                        
+            elif self.option_selected == "FONTE 200A":
+                if listing_type == "Clássico" and price:
+                    if self.option_selected == "FONTE 200A" and price >= fonte200Classico:
+                        continue;
+                elif listing_type == "Premium" and price:
+                    if self.option_selected == "FONTE 200A" and price >= fonte200Premium:
+                        continue;
+                
+            elif self.option_selected == "FONTE 200 MONO":
+                if listing_type == "Clássico" and price:
+                    if self.option_selected == "FONTE 200 MONO" and price >= fonte200monoClassico:
+                        continue;
+                elif listing_type == "Premium" and price:
+                    if self.option_selected == "FONTE 200 MONO" and price >= fonte200monoPremium:
+                        continue;
+                        
+            elif self.option_selected == "FONTE 200A LITE":
+                if listing_type == "Clássico" and price:
+                    if self.option_selected == "FONTE 200A LITE" and price >= fonte200liteClassico:
+                        continue;
+                elif listing_type == "Premium" and price:
+                    if self.option_selected == "FONTE 200A LITE" and price >= fonte200litePremium:
+                        continue;
+                        
+            elif self.option_selected == "FONTE 200 BOB":
+                if listing_type == "Clássico" and price:
+                    if self.option_selected == "FONTE 200 BOB" and price >= fonte200bobClassico:
+                        continue;
+                elif listing_type == "Premium" and price:
+                    if self.option_selected == "FONTE 200 BOB" and price >= fonte200bobPremium:
+                        continue;
+            yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': response.xpath('//h1[@class="ui-pdp-title"]'), 'loja': loja, 'price':price,'listing_type': listing_type, 'cupom': ""})
+            
+            if response.xpath('//li[@class="andes-pagination__button andes-pagination__button--next"]/a/@href'):
+                next_page = response.xpath('//li[@class="andes-pagination__button andes-pagination__button--next"]/a/@href').get()
+                yield scrapy.Request(url=next_page, callback=self.get_catalog)
+        # //div[@class="ui-pdp-actions__container"]/input[@name="item_id"]]
+        # ?pdp_filters=item_id:MLB5041771116
+                       
     def get_cupom(self, response):
         url = response.meta['url']
         name = response.meta['name']
@@ -1320,3 +1462,4 @@ class MlSpider(scrapy.Spider):
                 }
                 doc.save(fr"dados/{self.option_selected_new}.docx")
         
+    
