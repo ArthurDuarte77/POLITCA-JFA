@@ -24,111 +24,111 @@ df.columns = ['PRODUTO', 'inutil1', 'SITE', 'COLUNA3','inutil2', 'CLÁSSICO ML',
 
 for index, i in df.iterrows():
     if i['PRODUTO'] == "FONTE 40A":
-        fonte40Marketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte40Classico = round(i['COLUNA5'], 2) - 0.05;
-        fonte40Premium = round(i['COLUNA7'], 2) - 0.05;
+        fonte40Marketplace = round(i['COLUNA3'], 2) - 0;
+        fonte40Classico = round(i['COLUNA5'], 2) - 0;
+        fonte40Premium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 60A":
-        fonte60Marketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte60Classico = round(i['COLUNA5'], 2) - 0.05;
-        fonte60Premium = round(i['COLUNA7'], 2) - 0.05;
+        fonte60Marketplace = round(i['COLUNA3'], 2) - 0;
+        fonte60Classico = round(i['COLUNA5'], 2) - 0;
+        fonte60Premium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 60A LITE":
-        fonte60liteMarketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte60liteClassico = round(i['COLUNA5'], 2) - 0.05;
-        fonte60litePremium = round(i['COLUNA7'], 2) - 0.05;
+        fonte60liteMarketplace = round(i['COLUNA3'], 2) - 0;
+        fonte60liteClassico = round(i['COLUNA5'], 2) - 0;
+        fonte60litePremium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 70A":
-        fonte70Marketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte70Classico = round(i['COLUNA5'], 2) - 0.05;
-        fonte70Premium = round(i['COLUNA7'], 2) - 0.05;
+        fonte70Marketplace = round(i['COLUNA3'], 2) - 0;
+        fonte70Classico = round(i['COLUNA5'], 2) - 0;
+        fonte70Premium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 70A LITE":
-        fonte70liteMarketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte70liteClassico = round(i['COLUNA5'], 2) - 0.05;
-        fonte70litePremium = round(i['COLUNA7'], 2) - 0.05;
+        fonte70liteMarketplace = round(i['COLUNA3'], 2) - 0;
+        fonte70liteClassico = round(i['COLUNA5'], 2) - 0;
+        fonte70litePremium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 90 BOB":
-        fonte90bobMarketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte90bobClassico = round(i['COLUNA5'], 2) - 0.05;
-        fonte90bobPremium = round(i['COLUNA7'], 2) - 0.05;
+        fonte90bobMarketplace = round(i['COLUNA3'], 2) - 0;
+        fonte90bobClassico = round(i['COLUNA5'], 2) - 0;
+        fonte90bobPremium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 120 BOB":
-        fonte120bobMarketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte120bobClassico = round(i['COLUNA5'], 2) - 0.05;
-        fonte120bobPremium = round(i['COLUNA7'], 2) - 0.05;
+        fonte120bobMarketplace = round(i['COLUNA3'], 2) - 0;
+        fonte120bobClassico = round(i['COLUNA5'], 2) - 0;
+        fonte120bobPremium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 120A LITE":
-        fonte120liteMarketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte120liteClassico = round(i['COLUNA5'], 2) - 0.05;
-        fonte120litePremium = round(i['COLUNA7'], 2) - 0.05;
+        fonte120liteMarketplace = round(i['COLUNA3'], 2) - 0;
+        fonte120liteClassico = round(i['COLUNA5'], 2) - 0;
+        fonte120litePremium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 120A":
-        fonte120Marketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte120Classico = round(i['COLUNA5'], 2) - 0.05;
-        fonte120Premium = round(i['COLUNA7'], 2) - 0.05;
+        fonte120Marketplace = round(i['COLUNA3'], 2) - 0;
+        fonte120Classico = round(i['COLUNA5'], 2) - 0;
+        fonte120Premium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 200 BOB":
-        fonte200bobMarketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte200bobClassico = round(i['COLUNA5'], 2) - 0.05;
-        fonte200bobPremium = round(i['COLUNA7'], 2) - 0.05;
+        fonte200bobMarketplace = round(i['COLUNA3'], 2) - 0;
+        fonte200bobClassico = round(i['COLUNA5'], 2) - 0;
+        fonte200bobPremium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 200A LITE":
-        fonte200liteMarketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte200liteClassico = round(i['COLUNA5'], 2) - 0.05;
-        fonte200litePremium = round(i['COLUNA7'], 2) - 0.05;
+        fonte200liteMarketplace = round(i['COLUNA3'], 2) - 0;
+        fonte200liteClassico = round(i['COLUNA5'], 2) - 0;
+        fonte200litePremium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 200 MONO":
-        fonte200monoMarketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte200monoClassico = round(i['COLUNA5'], 2) - 0.05;
-        fonte200monoPremium = round(i['COLUNA7'], 2) - 0.05;
+        fonte200monoMarketplace = round(i['COLUNA3'], 2) - 0;
+        fonte200monoClassico = round(i['COLUNA5'], 2) - 0;
+        fonte200monoPremium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 200A":
-        fonte200Marketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte200Classico = round(i['COLUNA5'], 2) - 0.05;
-        fonte200Premium = round(i['COLUNA7'], 2) - 0.05;
+        fonte200Marketplace = round(i['COLUNA3'], 2) - 0;
+        fonte200Classico = round(i['COLUNA5'], 2) - 0;
+        fonte200Premium = round(i['COLUNA7'], 2) - 0;
         
 for index, i in db.iterrows():
     if i['PRODUTO'] == "FONTE 40A":
-        fonte40Marketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte40Classico = round(i['COLUNA5'], 2) - 0.05;
-        fonte40Premium = round(i['COLUNA7'], 2) - 0.05;
+        fonte40Marketplace = round(i['COLUNA3'], 2) - 0;
+        fonte40Classico = round(i['COLUNA5'], 2) - 0;
+        fonte40Premium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 60A":
-        fonte60Marketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte60Classico = round(i['COLUNA5'], 2) - 0.05;
-        fonte60Premium = round(i['COLUNA7'], 2) - 0.05;
+        fonte60Marketplace = round(i['COLUNA3'], 2) - 0;
+        fonte60Classico = round(i['COLUNA5'], 2) - 0;
+        fonte60Premium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 60A LITE":
-        fonte60liteMarketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte60liteClassico = round(i['COLUNA5'], 2) - 0.05;
-        fonte60litePremium = round(i['COLUNA7'], 2) - 0.05;
+        fonte60liteMarketplace = round(i['COLUNA3'], 2) - 0;
+        fonte60liteClassico = round(i['COLUNA5'], 2) - 0;
+        fonte60litePremium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 70A":
-        fonte70Marketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte70Classico = round(i['COLUNA5'], 2) - 0.05;
-        fonte70Premium = round(i['COLUNA7'], 2) - 0.05;
+        fonte70Marketplace = round(i['COLUNA3'], 2) - 0;
+        fonte70Classico = round(i['COLUNA5'], 2) - 0;
+        fonte70Premium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 70A LITE":
-        fonte70liteMarketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte70liteClassico = round(i['COLUNA5'], 2) - 0.05;
-        fonte70litePremium = round(i['COLUNA7'], 2) - 0.05;
+        fonte70liteMarketplace = round(i['COLUNA3'], 2) - 0;
+        fonte70liteClassico = round(i['COLUNA5'], 2) - 0;
+        fonte70litePremium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 90 BOB":
-        fonte90bobMarketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte90bobClassico = round(i['COLUNA5'], 2) - 0.05;
-        fonte90bobPremium = round(i['COLUNA7'], 2) - 0.05;
+        fonte90bobMarketplace = round(i['COLUNA3'], 2) - 0;
+        fonte90bobClassico = round(i['COLUNA5'], 2) - 0;
+        fonte90bobPremium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 120 BOB":
-        fonte120bobMarketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte120bobClassico = round(i['COLUNA5'], 2) - 0.05;
-        fonte120bobPremium = round(i['COLUNA7'], 2) - 0.05;
+        fonte120bobMarketplace = round(i['COLUNA3'], 2) - 0;
+        fonte120bobClassico = round(i['COLUNA5'], 2) - 0;
+        fonte120bobPremium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 120A LITE":
-        fonte120liteMarketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte120liteClassico = round(i['COLUNA5'], 2) - 0.05;
-        fonte120litePremium = round(i['COLUNA7'], 2) - 0.05;
+        fonte120liteMarketplace = round(i['COLUNA3'], 2) - 0;
+        fonte120liteClassico = round(i['COLUNA5'], 2) - 0;
+        fonte120litePremium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 120A":
-        fonte120Marketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte120Classico = round(i['COLUNA5'], 2) - 0.05;
-        fonte120Premium = round(i['COLUNA7'], 2) - 0.05;
+        fonte120Marketplace = round(i['COLUNA3'], 2) - 0;
+        fonte120Classico = round(i['COLUNA5'], 2) - 0;
+        fonte120Premium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 200 BOB":
-        fonte200bobMarketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte200bobClassico = round(i['COLUNA5'], 2) - 0.05;
-        fonte200bobPremium = round(i['COLUNA7'], 2) - 0.05;
+        fonte200bobMarketplace = round(i['COLUNA3'], 2) - 0;
+        fonte200bobClassico = round(i['COLUNA5'], 2) - 0;
+        fonte200bobPremium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 200A LITE":
-        fonte200liteMarketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte200liteClassico = round(i['COLUNA5'], 2) - 0.05;
-        fonte200litePremium = round(i['COLUNA7'], 2) - 0.05;
+        fonte200liteMarketplace = round(i['COLUNA3'], 2) - 0;
+        fonte200liteClassico = round(i['COLUNA5'], 2) - 0;
+        fonte200litePremium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 200 MONO":
-        fonte200monoMarketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte200monoClassico = round(i['COLUNA5'], 2) - 0.05;
-        fonte200monoPremium = round(i['COLUNA7'], 2) - 0.05;
+        fonte200monoMarketplace = round(i['COLUNA3'], 2) - 0;
+        fonte200monoClassico = round(i['COLUNA5'], 2) - 0;
+        fonte200monoPremium = round(i['COLUNA7'], 2) - 0;
     elif i['PRODUTO'] == "FONTE 200A":
-        fonte200Marketplace = round(i['COLUNA3'], 2) - 0.05;
-        fonte200Classico = round(i['COLUNA5'], 2) - 0.05;
-        fonte200Premium = round(i['COLUNA7'], 2) - 0.05;
+        fonte200Marketplace = round(i['COLUNA3'], 2) - 0;
+        fonte200Classico = round(i['COLUNA5'], 2) - 0;
+        fonte200Premium = round(i['COLUNA7'], 2) - 0;
 
 # if os.path.exists("dados_scrapy.docx"):
 #     doc = Document("dados_scrapy.docx")
@@ -321,7 +321,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 40A" and price >= fonte40Premium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
-                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
+                        # yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-40a-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-40a_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-40a_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -339,7 +339,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 60A" and price >= fonte60Premium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
-                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
+                        # yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-60a-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-60a_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-60a_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -357,7 +357,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 60A LITE" and price >= fonte60litePremium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
-                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
+                        # yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-60a-lite-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-60a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-60a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -376,7 +376,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 70A" and price >= fonte70Premium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
-                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
+                        # yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-70a-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-70a_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-70a_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -396,7 +396,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 70A LITE" and price >= fonte70litePremium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
-                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
+                        # yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-70a-lite-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-70a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-70a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -416,7 +416,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 90 BOB" and price >= fonte90bobPremium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
-                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
+                        # yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-90a-bob-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-90a-bob_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-90a-bob_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -436,7 +436,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 120A" and price >= fonte120Premium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price,'listing_type': listing_type, 'cupom': cupom})
-                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
+                        # yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-120a-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-120a_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-120a_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -456,7 +456,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 120A LITE" and price >= fonte120litePremium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
-                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
+                        # yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-120a-lite-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-120a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-120a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -476,7 +476,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 120 BOB" and price >= fonte120bobPremium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price,'listing_type': listing_type, 'cupom': cupom})
-                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
+                        # yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-120a-bob-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-120a-bob_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-120a-bob_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -496,7 +496,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 200A" and price >= fonte200Premium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
-                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
+                        # yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-200a-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-200a_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-200a_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -516,7 +516,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 200 MONO" and price >= fonte200monoPremium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price,'listing_type': listing_type, 'cupom': cupom})
-                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
+                        # yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-200a-mono-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-200a-mono_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-200a-mono_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -535,7 +535,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 200A LITE" and price >= fonte200litePremium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
-                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
+                        # yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-200a-lite-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-200a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-200a-lite_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})
@@ -554,7 +554,7 @@ class MlSpider(scrapy.Spider):
                             if self.option_selected == "FONTE 200 BOB" and price >= fonte200bobPremium:
                                 continue;
                         yield scrapy.Request(url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
-                        yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
+                        # yield scrapy.Request(url=url.split('?')[0] + '/s', callback=self.get_catalog) 
                         yield scrapy.Request(url='https://www.radicalsom.com.br/fonte-200a-bob-jfa_OrderId_PRICE_NoIndex_True', callback=self.parse_radicalson, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.bestonline.com.br/fonte-jfa-200a-bo_OrderId_PRICE_NoIndex_True', callback=self.parse_bestonline, meta={'name': name, 'loja': loja, 'price':price})
                         yield scrapy.Request(url='https://www.shoppratico.com.br/fonte-jfa-200a-bo_OrderId_PRICE_NoIndex_True', callback=self.parse_shoppratico, meta={'name': name, 'loja': loja, 'price':price})

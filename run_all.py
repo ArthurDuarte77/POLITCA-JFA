@@ -17,18 +17,18 @@ import pandas as pd
 from selenium.common.exceptions import *
 import re
 
-service = Service()
-options = webdriver.ChromeOptions()
-titulo_arquivo = ""
-options.add_argument("--headless=new")
+# service = Service()
+# options = webdriver.ChromeOptions()
+# titulo_arquivo = ""
+# options.add_argument("--headless=new")
 
-options.add_argument("--disable-gpu")
-options.add_argument("--disable-extensions")
-prefs = {"profile.managed_default_content_settings.images": 2}
-options.add_experimental_option("prefs", prefs)
+# options.add_argument("--disable-gpu")
+# options.add_argument("--disable-extensions")
+# prefs = {"profile.managed_default_content_settings.images": 2}
+# options.add_experimental_option("prefs", prefs)
 
 
-driver = webdriver.Chrome(service=service, options=options)
+# driver = webdriver.Chrome(service=service, options=options)
 
 def load_cookies(driver, cookies_file):
     with open(cookies_file, 'r') as file:
