@@ -1,0 +1,316 @@
+[
+    {
+        "modelo": "FONTE 60A",
+        "Seller": "ACESSÓRIOS WEB",
+        "Title": "Fonte Automotiva 60a Jfa Carregador Com Sistema Sci",
+        "Price": 417.67,
+        "price_previsto": 456.36,
+        "real_price": null,
+        "real_price_previsto": 480.38,
+        "Listing Type": "gold_special",
+        "Link": "https://produto.mercadolivre.com.br/MLB-1992683232-fonte-automotiva-60a-jfa-carregador-com-sistema-sci-_JM",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:6492330297930476}],source:6492330297930476,value_type:string}",
+            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554804303,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554804303,struct:null,source:6492330297930476}],source:6492330297930476,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:1}],source:1,value_type:list}",
+            "{id:LINE,name:Linha,value_id:null,value_name:SCI,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:SCI,struct:null,source:6492330297930476}],source:6492330297930476,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:null,value_name:60 amperes,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:60 amperes,struct:null,source:6492330297930476}],source:6492330297930476,value_type:string}"
+        ]
+    },
+    {
+        "modelo": "FONTE 60A",
+        "Seller": "ACESSÓRIOS WEB",
+        "Title": "Fonte Automotiva Carregador Jfa 60a Bivolt Automático Sci",
+        "Price": 434.77,
+        "price_previsto": 487.48,
+        "real_price": null,
+        "real_price_previsto": 513.14,
+        "Listing Type": "gold_pro",
+        "Link": "https://produto.mercadolivre.com.br/MLB-2000260510-fonte-automotiva-carregador-jfa-60a-bivolt-automatico-sci-_JM",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:6492330297930476}],source:6492330297930476,value_type:string}",
+            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554804303,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554804303,struct:null,source:6492330297930476}],source:6492330297930476,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:1}],source:1,value_type:list}",
+            "{id:LINE,name:Linha,value_id:null,value_name:SCI,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:SCI,struct:null,source:6492330297930476}],source:6492330297930476,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:null,value_name:60 amperes,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:60 amperes,struct:null,source:6492330297930476}],source:6492330297930476,value_type:string}"
+        ]
+    },
+    {
+        "modelo": "FONTE 60A",
+        "Seller": "VIDEOSOM AT",
+        "Title": "Fonte Carregador Jfa 60a Bivolt Storm Com Medidor Cca",
+        "Price": 443.07,
+        "price_previsto": 456.36,
+        "real_price": null,
+        "real_price_previsto": 480.38,
+        "Listing Type": "gold_special",
+        "Link": "https://produto.mercadolivre.com.br/MLB-4626689536-fonte-carregador-jfa-60a-bivolt-storm-com-medidor-cca-_JM",
+        "attributes": [
+            "{id:VEHICLE_AMPLIFIER_LENGTH,name:Comprimento do amplificador,value_id:null,value_name:5.8 cm,attribute_group_id:,attribute_group_name:,value_struct:{number:5.8,unit:cm},values:[{id:null,name:5.8 cm,struct:{unit:cm,number:5.8},source:1}],source:1,value_type:number_unit}",
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
+            "{id:COLOR,name:Cor,value_id:52049,value_name:Preto,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:52049,name:Preto,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
+            "{id:ELECTRICAL_MAXIMUM_POWER,name:Potência máxima,value_id:-1,value_name:null,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:-1,name:null,struct:null,source:6402814585011704}],source:6402814585011704,value_type:number_unit}",
+            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554806956,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554806956,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:6402814585011704}],source:6402814585011704,value_type:list}",
+            "{id:LINE,name:Linha,value_id:null,value_name:STORM,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:STORM,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:null,value_name:60A,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:60A,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}"
+        ]
+    },
+    {
+        "modelo": "FONTE 70A",
+        "Seller": "MVWEBDIGITALS",
+        "Title": "Fonte E Carregador Storm Automotivo 70a Amperes Jfa",
+        "Price": 499.0,
+        "price_previsto": 508.22,
+        "real_price": null,
+        "real_price_previsto": 534.97,
+        "Listing Type": "gold_special",
+        "Link": "https://produto.mercadolivre.com.br/MLB-4510722648-fonte-e-carregador-storm-automotivo-70a-amperes-jfa-_JM",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:6402814585011704}],source:6402814585011704,value_type:list}",
+            "{id:LINE,name:Linha,value_id:16061417,value_name:Fonte Carregador,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:16061417,name:Fonte Carregador,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:16270656,value_name:70a,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:16270656,name:70a,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
+            "{id:VEHICLE_AMPLIFIER_LENGTH,name:Comprimento do amplificador,value_id:null,value_name:5.8 cm,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:5.8,unit:cm},values:[{id:null,name:5.8 cm,struct:{number:5.8,unit:cm},source:1}],source:1,value_type:number_unit}"
+        ]
+    },
+    {
+        "modelo": "FONTE 70A",
+        "Seller": "TOTALSOUND LS",
+        "Title": "Fonte Carregador Jfa 70a Slim Bivolt C/ Voltímetro Full",
+        "Price": 523.63,
+        "price_previsto": 539.34,
+        "real_price": null,
+        "real_price_previsto": 567.73,
+        "Listing Type": "gold_pro",
+        "Link": "https://produto.mercadolivre.com.br/MLB-3713385526-fonte-carregador-jfa-70a-slim-bivolt-c-voltimetro-full-_JM",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:4954751883138633}],source:4954751883138633,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:4954751883138633}],source:4954751883138633,value_type:list}",
+            "{id:LINE,name:Linha,value_id:16061417,value_name:Fonte Carregador,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:16061417,name:Fonte Carregador,struct:null,source:3942444344910321}],source:3942444344910321,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:16270656,value_name:70a,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:16270656,name:70a,struct:null,source:4954751883138633}],source:4954751883138633,value_type:string}"
+        ]
+    },
+    {
+        "modelo": "FONTE 70A",
+        "Seller": "TOTALSOUND LS",
+        "Title": "Fonte Carregador Jfa 70a Slim Bivolt C/ Voltímetro Full",
+        "Price": 493.42,
+        "price_previsto": 508.22,
+        "real_price": null,
+        "real_price_previsto": 534.97,
+        "Listing Type": "gold_special",
+        "Link": "https://produto.mercadolivre.com.br/MLB-3713397952-fonte-carregador-jfa-70a-slim-bivolt-c-voltimetro-full-_JM",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:4954751883138633}],source:4954751883138633,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:4954751883138633}],source:4954751883138633,value_type:list}",
+            "{id:LINE,name:Linha,value_id:16061417,value_name:Fonte Carregador,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:16061417,name:Fonte Carregador,struct:null,source:3942444344910321}],source:3942444344910321,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:16270656,value_name:70a,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:16270656,name:70a,struct:null,source:4954751883138633}],source:4954751883138633,value_type:string}"
+        ]
+    },
+    {
+        "modelo": "FONTE 70A LITE",
+        "Seller": "ULTRAFER FERRAMENTAS",
+        "Title": "Fonte Automotiva Jfa Storm Lite 70a Bivolt Carregador",
+        "Price": 439.0,
+        "price_previsto": 447.46,
+        "real_price": null,
+        "real_price_previsto": 471.01,
+        "Listing Type": "gold_pro",
+        "Link": "https://produto.mercadolivre.com.br/MLB-5066267626-fonte-automotiva-jfa-storm-lite-70a-bivolt-carregador-_JM",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:6402814585011704}],source:6402814585011704,value_type:list}",
+            "{id:LINE,name:Linha,value_id:null,value_name:Fonte Carregador Storm Lite - Fonte - Jfa - Fonte usina - Fonte automotiva - Fonte jfa,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:Fonte Carregador Storm Lite - Fonte - Jfa - Fonte usina - Fonte automotiva - Fonte jfa,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:16270656,value_name:70a,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:16270656,name:70a,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}"
+        ]
+    },
+    {
+        "modelo": "FONTE 70A LITE",
+        "Seller": "RADICALSOM_MATRIZ",
+        "Title": "Fonte Carregador Jfa 70a Lite Bivolt Sci Black Friday",
+        "Price": 447.45,
+        "price_previsto": 447.46,
+        "real_price": null,
+        "real_price_previsto": 471.01,
+        "Listing Type": "gold_pro",
+        "Link": "https://produto.mercadolivre.com.br/MLB-3602864164-fonte-carregador-jfa-70a-lite-bivolt-sci-black-friday-_JM",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554808004,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554808004,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:1}],source:1,value_type:list}",
+            "{id:LINE,name:Linha,value_id:null,value_name:Fonte Carregador Storm Lite,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:Fonte Carregador Storm Lite,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:16270656,value_name:70a,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:16270656,name:70a,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:VEHICLE_AMPLIFIER_WEIGHT,name:Peso do amplificador,value_id:-1,value_name:null,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:-1,name:null,struct:null,source:923230526977079}],source:923230526977079,value_type:number_unit}"
+        ]
+    },
+    {
+        "modelo": "FONTE 120A",
+        "Seller": "OPSOMDISTRIBUIDORA",
+        "Title": "Fonte Jfa 120 Amperes Carregador Automotivo Cor Preto",
+        "Price": 653.0,
+        "price_previsto": 694.92,
+        "real_price": null,
+        "real_price_previsto": 731.5,
+        "Listing Type": "gold_pro",
+        "Link": "https://produto.mercadolivre.com.br/MLB-5078874716-fonte-jfa-120-amperes-carregador-automotivo-cor-preto-_JM",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:6402814585011704}],source:6402814585011704,value_type:list}",
+            "{id:LINE,name:Linha,value_id:16061417,value_name:Fonte Carregador,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:16061417,name:Fonte Carregador,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:764824,value_name:120A,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:764824,name:120A,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
+            "{id:VEHICLE_AMPLIFIER_WEIGHT,name:Peso do amplificador,value_id:38476785,value_name:2.05 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:2.05,unit:kg},values:[{id:38476785,name:2.05 kg,struct:{number:2.05,unit:kg},source:6402814585011704}],source:6402814585011704,value_type:number_unit}"
+        ]
+    },
+    {
+        "modelo": "FONTE 120A",
+        "Seller": "IGORPASQUA",
+        "Title": "Fonte Automotiva 120a Amperes Jfa Carregador Cor Preto",
+        "Price": 450.0,
+        "price_previsto": 653.43,
+        "real_price": null,
+        "real_price_previsto": 687.82,
+        "Listing Type": "free",
+        "Link": "https://produto.mercadolivre.com.br/MLB-3858459653-fonte-automotiva-120a-amperes-jfa-carregador-cor-preto-_JM",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230581,value_name:Usado,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230581,name:Usado,struct:null,source:6402814585011704}],source:6402814585011704,value_type:list}",
+            "{id:LINE,name:Linha,value_id:16061417,value_name:Fonte Carregador,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:16061417,name:Fonte Carregador,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:764824,value_name:120A,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:764824,name:120A,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
+            "{id:VEHICLE_AMPLIFIER_WEIGHT,name:Peso do amplificador,value_id:38476785,value_name:2.05 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:2.05,unit:kg},values:[{id:38476785,name:2.05 kg,struct:{unit:kg,number:2.05},source:6402814585011704}],source:6402814585011704,value_type:number_unit}"
+        ]
+    },
+    {
+        "modelo": "FONTE 120A",
+        "Seller": "PEDROSOBIBI",
+        "Title": "Jfa 120a Storm - Fonte Carregador Digital Carga Flutuante",
+        "Price": 602.68,
+        "price_previsto": 653.43,
+        "real_price": "634.4",
+        "real_price_previsto": 687.82,
+        "Listing Type": "gold_special",
+        "Link": "https://produto.mercadolivre.com.br/MLB-1161783235-jfa-120a-storm-fonte-carregador-digital-carga-flutuante-_JM",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:1572}],source:1572,value_type:string}",
+            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554804297,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554804297,struct:null,source:1572}],source:1572,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:1572}],source:1572,value_type:list}",
+            "{id:LINE,name:Linha,value_id:null,value_name:Fonte Automotiva,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:Fonte Automotiva,struct:null,source:1572}],source:1572,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:null,value_name:JFA 120A,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:JFA 120A,struct:null,source:1572}],source:1572,value_type:string}"
+        ]
+    },
+    {
+        "modelo": "FONTE 200A",
+        "Seller": "RADICAL_SOM_FILIAL",
+        "Title": "Carregador Jfa Storm 200a 14,4v Mais Completa Smart Cca 220v",
+        "Price": 758.71,
+        "price_previsto": 829.76,
+        "real_price": null,
+        "real_price_previsto": 873.43,
+        "Listing Type": "gold_special",
+        "Link": "https://produto.mercadolivre.com.br/MLB-4156504566-carregador-jfa-storm-200a-144v-mais-completa-smart-cca-220v-_JM",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:3892071146919087}],source:3892071146919087,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:3892071146919087}],source:3892071146919087,value_type:list}",
+            "{id:LINE,name:Linha,value_id:16061417,value_name:Fonte Carregador,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:16061417,name:Fonte Carregador,struct:null,source:3892071146919087}],source:3892071146919087,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:20210847,value_name:200A Storm Carregador Bateria Inteligente,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:20210847,name:200A Storm Carregador Bateria Inteligente,struct:null,source:3892071146919087}],source:3892071146919087,value_type:string}",
+            "{id:VEHICLE_AMPLIFIER_LENGTH,name:Comprimento do amplificador,value_id:-1,value_name:null,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:-1,name:null,struct:null,source:3892071146919087}],source:3892071146919087,value_type:number_unit}",
+            "{id:VEHICLE_AMPLIFIER_WEIGHT,name:Peso do amplificador,value_id:null,value_name:2400 g,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:2400,unit:g},values:[{id:null,name:2400 g,struct:{number:2400,unit:g},source:3892071146919087}],source:3892071146919087,value_type:number_unit}"
+        ]
+    },
+    {
+        "modelo": "FONTE 200A",
+        "Seller": "RADICALSOM SHOP",
+        "Title": "Carregador Jfa Storm 200a 14,4v Mais Completa Smart Cca 220v",
+        "Price": 860.98,
+        "price_previsto": 871.25,
+        "real_price": null,
+        "real_price_previsto": 917.1,
+        "Listing Type": "gold_pro",
+        "Link": "https://produto.mercadolivre.com.br/MLB-3452387438-carregador-jfa-storm-200a-144v-mais-completa-smart-cca-220v-_JM",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:1}],source:1,value_type:list}",
+            "{id:LINE,name:Linha,value_id:16061417,value_name:Fonte Carregador,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:16061417,name:Fonte Carregador,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:20210847,value_name:200A Storm Carregador Bateria Inteligente,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:20210847,name:200A Storm Carregador Bateria Inteligente,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:VEHICLE_AMPLIFIER_LENGTH,name:Comprimento do amplificador,value_id:-1,value_name:null,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:-1,name:null,struct:null,source:923230526977079}],source:923230526977079,value_type:number_unit}",
+            "{id:VEHICLE_AMPLIFIER_WEIGHT,name:Peso do amplificador,value_id:null,value_name:2400 g,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:2400,unit:g},values:[{id:null,name:2400 g,struct:{number:2400,unit:g},source:3942444344910321}],source:3942444344910321,value_type:number_unit}"
+        ]
+    },
+    {
+        "modelo": "FONTE 200A",
+        "Seller": "RADICALSOM_MATRIZ",
+        "Title": "Carregador Jfa Storm 200a 14,4v Mais Completa Smart Cca 220v",
+        "Price": 798.12,
+        "price_previsto": 871.25,
+        "real_price": null,
+        "real_price_previsto": 917.1,
+        "Listing Type": "gold_pro",
+        "Link": "https://produto.mercadolivre.com.br/MLB-3284188503-carregador-jfa-storm-200a-144v-mais-completa-smart-cca-220v-_JM",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:1}],source:1,value_type:list}",
+            "{id:LINE,name:Linha,value_id:16061417,value_name:Fonte Carregador,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:16061417,name:Fonte Carregador,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:20210847,value_name:200A Storm Carregador Bateria Inteligente,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:20210847,name:200A Storm Carregador Bateria Inteligente,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:VEHICLE_AMPLIFIER_LENGTH,name:Comprimento do amplificador,value_id:-1,value_name:null,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:-1,name:null,struct:null,source:923230526977079}],source:923230526977079,value_type:number_unit}",
+            "{id:VEHICLE_AMPLIFIER_WEIGHT,name:Peso do amplificador,value_id:null,value_name:2400 g,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:2400,unit:g},values:[{id:null,name:2400 g,struct:{number:2400,unit:g},source:3942444344910321}],source:3942444344910321,value_type:number_unit}"
+        ]
+    },
+    {
+        "modelo": "FONTE 200A",
+        "Seller": "EXTREME ÀUDIO",
+        "Title": "Fonte Jfa 200a Storm Bivolt Som Automotivo 200 Amperes ",
+        "Price": 780.33,
+        "price_previsto": 829.76,
+        "real_price": null,
+        "real_price_previsto": 873.43,
+        "Listing Type": "gold_special",
+        "Link": "https://produto.mercadolivre.com.br/MLB-3482054069-fonte-jfa-200a-storm-bivolt-som-automotivo-200-amperes-_JM",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554807984,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554807984,struct:null,source:8610376314047427}],source:8610376314047427,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:923230526977079}],source:923230526977079,value_type:list}",
+            "{id:LINE,name:Linha,value_id:33266,value_name:Storm,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:33266,name:Storm,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:null,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:JFA,struct:null,source:8610376314047427}],source:8610376314047427,value_type:string}",
+            "{id:VEHICLE_AMPLIFIER_LENGTH,name:Comprimento do amplificador,value_id:null,value_name:32 cm,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:32,unit:cm},values:[{id:null,name:32 cm,struct:{number:32,unit:cm},source:923230526977079}],source:923230526977079,value_type:number_unit}",
+            "{id:VEHICLE_AMPLIFIER_WEIGHT,name:Peso do amplificador,value_id:null,value_name:2 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:2,unit:kg},values:[{id:null,name:2 kg,struct:{number:2,unit:kg},source:923230526977079}],source:923230526977079,value_type:number_unit}"
+        ]
+    },
+    {
+        "modelo": "FONTE 200A",
+        "Seller": "RADICALSOM SHOP",
+        "Title": "Carregador Jfa Storm 200a 14,4v Mais Completa Smart Cca 220v",
+        "Price": 818.46,
+        "price_previsto": 829.76,
+        "real_price": null,
+        "real_price_previsto": 873.43,
+        "Listing Type": "gold_special",
+        "Link": "https://produto.mercadolivre.com.br/MLB-3284200713-carregador-jfa-storm-200a-144v-mais-completa-smart-cca-220v-_JM",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:1}],source:1,value_type:list}",
+            "{id:LINE,name:Linha,value_id:16061417,value_name:Fonte Carregador,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:16061417,name:Fonte Carregador,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:20210847,value_name:200A Storm Carregador Bateria Inteligente,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:20210847,name:200A Storm Carregador Bateria Inteligente,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:VEHICLE_AMPLIFIER_LENGTH,name:Comprimento do amplificador,value_id:-1,value_name:null,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:-1,name:null,struct:null,source:923230526977079}],source:923230526977079,value_type:number_unit}",
+            "{id:VEHICLE_AMPLIFIER_WEIGHT,name:Peso do amplificador,value_id:null,value_name:2400 g,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:2400,unit:g},values:[{id:null,name:2400 g,struct:{number:2400,unit:g},source:3942444344910321}],source:3942444344910321,value_type:number_unit}"
+        ]
+    },
+    {
+        "modelo": "FONTE 200A",
+        "Seller": "RADICALSOM_MATRIZ",
+        "Title": "Carregador Jfa Storm 200a 14,4v Mais Completa Smart Cca 220v",
+        "Price": 758.71,
+        "price_previsto": 829.76,
+        "real_price": null,
+        "real_price_previsto": 873.43,
+        "Listing Type": "gold_special",
+        "Link": "https://produto.mercadolivre.com.br/MLB-3452365244-carregador-jfa-storm-200a-144v-mais-completa-smart-cca-220v-_JM",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:1}],source:1,value_type:list}",
+            "{id:LINE,name:Linha,value_id:16061417,value_name:Fonte Carregador,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:16061417,name:Fonte Carregador,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:MODEL,name:Modelo,value_id:20210847,value_name:200A Storm Carregador Bateria Inteligente,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:20210847,name:200A Storm Carregador Bateria Inteligente,struct:null,source:923230526977079}],source:923230526977079,value_type:string}",
+            "{id:VEHICLE_AMPLIFIER_LENGTH,name:Comprimento do amplificador,value_id:-1,value_name:null,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:-1,name:null,struct:null,source:923230526977079}],source:923230526977079,value_type:number_unit}",
+            "{id:VEHICLE_AMPLIFIER_WEIGHT,name:Peso do amplificador,value_id:null,value_name:2400 g,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:2400,unit:g},values:[{id:null,name:2400 g,struct:{number:2400,unit:g},source:3942444344910321}],source:3942444344910321,value_type:number_unit}"
+        ]
+    }
+]

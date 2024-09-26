@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste chat-bot</title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+      project-id="esp8266-352723"
+      agent-id="7c04bec6-ea4c-4ceb-a1d6-b5a1a20c5caa"
+      language-code="pt-br"
+      max-query-length="-1"
+      allow-feedback="all">
+      <df-messenger-chat-bubble
+       chat-title="Chatbot JFA">
+      </df-messenger-chat-bubble>
+    </df-messenger>
+    <style>
+      df-messenger {
+        z-index: 999;
+        position: fixed;
+        --df-messenger-font-color: #000000;
+        /* --df-messenger-font-family: Roboto; */
+        --df-messenger-chat-background: rgb(0, 175, 239);
+        --df-messenger-message-user-background: rgb(12, 64, 104);
+        --df-messenger-message-bot-background: #fff;
+        bottom: 16px;
+        right: 16px;
+      }
+    </style>
+  </body>
+</html>
