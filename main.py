@@ -216,7 +216,10 @@ for index, i in db.iterrows():
         fonte200Marketplaceprice = round(i['SITE'], 2);
         
 #"search_filters": "BRAND=2466336@category=MLB3381@", #MLB2227, 22292586
-        
+
+def get_diferenca(price, previsto):
+    return (price / previsto) * 100;
+ 
 options_req = [
     "FONTE 40A",
     "FONTE 60A",
@@ -361,6 +364,9 @@ for option in tqdm(options_req):
                             if isWrong:
                                 continue
                             if listing_type_id == "gold_pro" and price < fonte40Premium:
+                                item['diferenca'] = get_diferenca(price, fonte40Premium)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte40Premium
                                 item['real_price_previsto'] = fonte40PremiumPrice
                                 if real_price:
@@ -370,6 +376,9 @@ for option in tqdm(options_req):
                                     all_filtered_results.append(item) 
 
                             elif price < fonte40Classico:
+                                item['diferenca'] = get_diferenca(price, fonte40Classico)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte40Classico
                                 item['real_price_previsto'] = fonte40ClassicoPrice
                                 if real_price:
@@ -389,6 +398,9 @@ for option in tqdm(options_req):
                             if isWrong:
                                 continue
                             if listing_type_id == "gold_pro" and price < fonte60Premium:
+                                item['diferenca'] = get_diferenca(price, fonte60Premium)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte60Premium
                                 item['real_price_previsto'] = fonte60PremiumPrice
                                 if real_price:
@@ -398,6 +410,9 @@ for option in tqdm(options_req):
                                     all_filtered_results.append(item) 
 
                             elif price < fonte60Classico:
+                                item['diferenca'] = get_diferenca(price, fonte60Classico)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte60Classico
                                 item['real_price_previsto'] = fonte60ClassicoPrice
                                 if real_price:
@@ -417,6 +432,9 @@ for option in tqdm(options_req):
                             if isWrong:
                                 continue
                             if listing_type_id == "gold_pro" and price < fonte60litePremium:
+                                item['diferenca'] = get_diferenca(price, fonte60litePremium)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte60litePremium
                                 item['real_price_previsto'] = fonte60litePremiumPrice
                                 if real_price:
@@ -426,6 +444,9 @@ for option in tqdm(options_req):
                                     all_filtered_results.append(item) 
 
                             elif price < fonte60liteClassico:
+                                item['diferenca'] = get_diferenca(price, fonte60liteClassico)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte60liteClassico
                                 item['real_price_previsto'] = fonte60liteClassicoPrice
                                 if real_price:
@@ -446,6 +467,9 @@ for option in tqdm(options_req):
                             if isWrong:
                                 continue
                             if listing_type_id == "gold_pro" and price < fonte70Premium:
+                                item['diferenca'] = get_diferenca(price, fonte70Premium)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte70Premium
                                 item['real_price_previsto'] = fonte70PremiumPrice
                                 if real_price:
@@ -455,6 +479,9 @@ for option in tqdm(options_req):
                                     all_filtered_results.append(item) 
 
                             elif price < fonte70Classico:
+                                item['diferenca'] = get_diferenca(price, fonte70Classico)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte70Classico
                                 item['real_price_previsto'] = fonte70ClassicoPrice
                                 if real_price:
@@ -474,6 +501,9 @@ for option in tqdm(options_req):
                             if isWrong:
                                 continue
                             if listing_type_id == "gold_pro" and price < fonte70litePremium:
+                                item['diferenca'] = get_diferenca(price, fonte70litePremium)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte70litePremium
                                 item['real_price_previsto'] = fonte70litePremiumPrice
                                 if real_price:
@@ -483,6 +513,9 @@ for option in tqdm(options_req):
                                     all_filtered_results.append(item) 
 
                             elif price < fonte70liteClassico:
+                                item['diferenca'] = get_diferenca(price, fonte70liteClassico)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte70liteClassico
                                 item['real_price_previsto'] = fonte70liteClassicoPrice
                                 if real_price:
@@ -502,6 +535,9 @@ for option in tqdm(options_req):
                             if isWrong:
                                 continue
                             if listing_type_id == "gold_pro" and price < fonte120Premium:
+                                item['diferenca'] = get_diferenca(price, fonte120Premium)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte120Premium
                                 item['real_price_previsto'] = fonte120PremiumPrice
                                 if real_price:
@@ -511,6 +547,9 @@ for option in tqdm(options_req):
                                     all_filtered_results.append(item) 
 
                             elif price < fonte120Classico:
+                                item['diferenca'] = get_diferenca(price, fonte120Classico)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte120Classico
                                 item['real_price_previsto'] = fonte120ClassicoPrice
                                 if real_price:
@@ -530,6 +569,9 @@ for option in tqdm(options_req):
                             if isWrong:
                                 continue
                             if listing_type_id == "gold_pro" and price < fonte120litePremium:
+                                item['diferenca'] = get_diferenca(price, fonte120litePremium)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte120litePremium
                                 item['real_price_previsto'] = fonte120litePremiumPrice
                                 if real_price:
@@ -539,6 +581,9 @@ for option in tqdm(options_req):
                                     all_filtered_results.append(item) 
 
                             elif price < fonte120liteClassico:
+                                item['diferenca'] = get_diferenca(price, fonte120liteClassico)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte120liteClassico
                                 item['real_price_previsto'] = fonte120liteClassicoPrice
                                 if real_price:
@@ -549,7 +594,7 @@ for option in tqdm(options_req):
 
                 elif option == "FONTE 200A":
                     item['modelo'] = "FONTE 200A"
-                    if "bob" not in title and "lite" not in title and "light" not in title and "controle" not in title and 'mono' not in title and 'monovolt' not in title:
+                    if "bob" not in title and "lite" not in title and "light" not in title and "controle" not in title and 'mono' not in title and 'monovolt' not in title and "220v" not in title:
                         if "200a" in title or "200" in title or "200 amperes" in title or "200amperes" in title or "200 a" in title:
                             isWrong = False
                             for attribute in item['attributes']:
@@ -558,6 +603,9 @@ for option in tqdm(options_req):
                             if isWrong:
                                 continue;                                   
                             if listing_type_id == "gold_pro" and price < fonte200Premium:
+                                item['diferenca'] = get_diferenca(price, fonte200Premium)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte200Premium
                                 item['real_price_previsto'] = fonte200PremiumPrice
                                 if real_price is not None:
@@ -566,6 +614,9 @@ for option in tqdm(options_req):
                                 else:
                                     all_filtered_results.append(item)
                             elif price < fonte200Classico:
+                                item['diferenca'] = get_diferenca(price, fonte200Classico)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte200Classico
                                 item['real_price_previsto'] = fonte200ClassicoPrice
                                 if real_price is not None:
@@ -585,6 +636,9 @@ for option in tqdm(options_req):
                             if isWrong:
                                 continue
                             if listing_type_id == "gold_pro" and price < fonte200litePremium:
+                                item['diferenca'] = get_diferenca(price, fonte200litePremium)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte200litePremium
                                 item['real_price_previsto'] = fonte200litePremiumPrice
                                 if real_price:
@@ -594,6 +648,9 @@ for option in tqdm(options_req):
                                     all_filtered_results.append(item) 
 
                             elif price < fonte200liteClassico:
+                                item['diferenca'] = get_diferenca(price, fonte200liteClassico)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte200liteClassico
                                 item['real_price_previsto'] = fonte200liteClassicoPrice
                                 if real_price:
@@ -613,6 +670,9 @@ for option in tqdm(options_req):
                             if isWrong:
                                 continue
                             if listing_type_id == "gold_pro" and price < fonte90bobPremium:
+                                item['diferenca'] = get_diferenca(price, fonte90bobPremium)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte90bobPremium
                                 item['real_price_previsto'] = fonte90bobPremiumPrice
                                 if real_price:
@@ -622,6 +682,9 @@ for option in tqdm(options_req):
                                     all_filtered_results.append(item) 
 
                             elif price < fonte90bobClassico:
+                                item['diferenca'] = get_diferenca(price, fonte90bobClassico)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte90bobClassico
                                 item['real_price_previsto'] = fonte90bobClassicoPrice
                                 if real_price:
@@ -641,6 +704,9 @@ for option in tqdm(options_req):
                             if isWrong:
                                 continue
                             if listing_type_id == "gold_pro" and price < fonte120bobPremium:
+                                item['diferenca'] = get_diferenca(price, fonte120bobPremium)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte120bobPremium
                                 item['real_price_previsto'] = fonte120bobPremiumPrice
                                 if real_price:
@@ -650,6 +716,9 @@ for option in tqdm(options_req):
                                     all_filtered_results.append(item) 
 
                             elif price < fonte120bobClassico:
+                                item['diferenca'] = get_diferenca(price, fonte120bobClassico)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte120bobClassico
                                 item['real_price_previsto'] = fonte120bobClassicoPrice
                                 if real_price:
@@ -669,6 +738,9 @@ for option in tqdm(options_req):
                             if isWrong:
                                 continue
                             if listing_type_id == "gold_pro" and price < fonte200bobPremium:
+                                item['diferenca'] = get_diferenca(price, fonte200bobPremium)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte200bobPremium
                                 item['real_price_previsto'] = fonte200bobPremiumPrice
                                 if real_price:
@@ -678,6 +750,9 @@ for option in tqdm(options_req):
                                     all_filtered_results.append(item) 
 
                             elif price < fonte200bobClassico:
+                                item['diferenca'] = get_diferenca(price, fonte200bobClassico)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte200bobClassico
                                 item['real_price_previsto'] = fonte200bobClassicoPrice
                                 if real_price:
@@ -697,6 +772,9 @@ for option in tqdm(options_req):
                             if isWrong:
                                 continue
                             if listing_type_id == "gold_pro" and price < fonte200monoPremium:
+                                item['diferenca'] = get_diferenca(price, fonte200monoPremium)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte200monoPremium
                                 item['real_price_previsto'] = fonte200monoPremiumPrice
                                 if real_price:
@@ -706,6 +784,9 @@ for option in tqdm(options_req):
                                     all_filtered_results.append(item) 
 
                             elif price < fonte200monoClassico:
+                                item['diferenca'] = get_diferenca(price, fonte200monoClassico)
+                                if item['diferenca'] < 70:
+                                    continue
                                 item['price_previsto'] = fonte200monoClassico
                                 item['real_price_previsto'] = fonte200monoClassicoPrice
                                 if real_price:
@@ -766,11 +847,9 @@ def enviar(grouped_by_seller):
         try:
             whatsapp_window.activate()
             time.sleep(1)  # Espera um pouco para garantir que a janela está em foco
-
             # Pressiona Ctrl+F para abrir a busca
             pyautogui.hotkey('ctrl', 'f')
-
-            # Digita o texto desejado
+            time.sleep(1)
             pyautogui.typewrite('politica E-commerce JFA')
             time.sleep(1)
             
