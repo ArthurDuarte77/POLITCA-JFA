@@ -26,195 +26,195 @@ db = pandas.read_excel("politica-promo.xlsx", engine='openpyxl')
 
 db.columns = ['PRODUTO', 'SITE', 'COLUNA3', 'CLÁSSICO ML', 'COLUNA5', 'PREMIUM ML', 'COLUNA7', 'MARKETPLACES', 'COLUNA9']
 
-df = pandas.read_excel("GESTÃO DE AÇÕES E-COMMERCE.xlsx", usecols='C:O', skiprows=start_row, nrows=num_rows, engine='openpyxl', sheet_name="POLÍTICA COMERCIAL Set24")
+df = pandas.read_excel("GESTÃO DE AÇÕES E-COMMERCE.xlsx", usecols='C:O', skiprows=start_row, nrows=num_rows, engine='openpyxl', sheet_name="POLÍTICA COMERCIAL Out24 II")
 
 df.columns = ['PRODUTO', 'inutil1', 'SITE', 'COLUNA3','inutil2', 'CLÁSSICO ML', 'COLUNA5','inutil3', 'PREMIUM ML', 'COLUNA7','inutil4', 'MARKETPLACES', 'COLUNA9']
 
 for index, i in df.iterrows():
     if i['PRODUTO'] == "FONTE 40A":
-        fonte40Marketplace = round(i['COLUNA3'], 2);
-        fonte40Classico = round(i['COLUNA5'], 2);
-        fonte40Premium = round(i['COLUNA7'], 2);
-        fonte40PremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte40ClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte40Marketplaceprice = round(i['SITE'], 2);
+        fonte40Marketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte40Classico = round(i['COLUNA5'], 2) - 0.01;
+        fonte40Premium = round(i['COLUNA7'], 2) - 0.01;
+        fonte40PremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte40ClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte40Marketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 60A":
-        fonte60Marketplace = round(i['COLUNA3'], 2);
-        fonte60Classico = round(i['COLUNA5'], 2);
-        fonte60Premium = round(i['COLUNA7'], 2);
-        fonte60PremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte60ClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte60Marketplaceprice = round(i['SITE'], 2);
+        fonte60Marketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte60Classico = round(i['COLUNA5'], 2) - 0.01;
+        fonte60Premium = round(i['COLUNA7'], 2) - 0.01;
+        fonte60PremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte60ClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte60Marketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 60A LITE":
-        fonte60liteMarketplace = round(i['COLUNA3'], 2);
-        fonte60liteClassico = round(i['COLUNA5'], 2);
-        fonte60litePremium = round(i['COLUNA7'], 2);
-        fonte60litePremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte60liteClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte60liteMarketplaceprice = round(i['SITE'], 2);
+        fonte60liteMarketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte60liteClassico = round(i['COLUNA5'], 2) - 0.01;
+        fonte60litePremium = round(i['COLUNA7'], 2) - 0.01;
+        fonte60litePremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte60liteClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte60liteMarketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 70A":
-        fonte70Marketplace = round(i['COLUNA3'], 2);
-        fonte70Classico = round(i['COLUNA5'], 2);
-        fonte70Premium = round(i['COLUNA7'], 2);
-        fonte70PremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte70ClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte70Marketplaceprice = round(i['SITE'], 2);
+        fonte70Marketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte70Classico = round(i['COLUNA5'], 2) - 0.01;
+        fonte70Premium = round(i['COLUNA7'], 2) - 0.01;
+        fonte70PremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte70ClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte70Marketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 70A LITE":
-        fonte70liteMarketplace = round(i['COLUNA3'], 2);
-        fonte70liteClassico = round(i['COLUNA5'], 2);
-        fonte70litePremium = round(i['COLUNA7'], 2);
-        fonte70litePremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte70liteClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte70liteMarketplaceprice = round(i['SITE'], 2);
+        fonte70liteMarketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte70liteClassico = round(i['COLUNA5'], 2) - 0.01;
+        fonte70litePremium = round(i['COLUNA7'], 2) - 0.01;
+        fonte70litePremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte70liteClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte70liteMarketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 90 BOB":
-        fonte90bobMarketplace = round(i['COLUNA3'], 2);
-        fonte90bobClassico = round(i['COLUNA5'], 2);
-        fonte90bobPremium = round(i['COLUNA7'], 2);
-        fonte90bobPremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte90bobClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte90bobMarketplaceprice = round(i['SITE'], 2);
+        fonte90bobMarketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte90bobClassico = round(i['COLUNA5'], 2) - 0.01;
+        fonte90bobPremium = round(i['COLUNA7'], 2) - 0.01;
+        fonte90bobPremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte90bobClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte90bobMarketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 120 BOB":
-        fonte120bobMarketplace = round(i['COLUNA3'], 2);
-        fonte120bobClassico = round(i['COLUNA5'], 2);
-        fonte120bobPremium = round(i['COLUNA7'], 2);
-        fonte120bobPremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte120bobClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte120bobMarketplaceprice = round(i['SITE'], 2);
+        fonte120bobMarketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte120bobClassico = round(i['COLUNA5'], 2) - 0.01;
+        fonte120bobPremium = round(i['COLUNA7'], 2) - 0.01;
+        fonte120bobPremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte120bobClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte120bobMarketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 120A LITE":
-        fonte120liteMarketplace = round(i['COLUNA3'], 2);
-        fonte120liteClassico = round(i['COLUNA5'], 2);
-        fonte120litePremium = round(i['COLUNA7'], 2);
-        fonte120litePremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte120liteClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte120liteMarketplaceprice = round(i['SITE'], 2);
+        fonte120liteMarketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte120liteClassico = round(i['COLUNA5'], 2) - 0.01;
+        fonte120litePremium = round(i['COLUNA7'], 2) - 0.01;
+        fonte120litePremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte120liteClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte120liteMarketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 120A":
-        fonte120Marketplace = round(i['COLUNA3'], 2);
-        fonte120Classico = round(i['COLUNA5'], 2);
-        fonte120Premium = round(i['COLUNA7'], 2);
-        fonte120PremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte120ClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte120Marketplaceprice = round(i['SITE'], 2);
+        fonte120Marketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte120Classico = round(i['COLUNA5'], 2) - 0.01;
+        fonte120Premium = round(i['COLUNA7'], 2) - 0.01;
+        fonte120PremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte120ClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte120Marketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 200 BOB":
-        fonte200bobMarketplace = round(i['COLUNA3'], 2);
-        fonte200bobClassico = round(i['COLUNA5'], 2);
-        fonte200bobPremium = round(i['COLUNA7'], 2);
-        fonte200bobPremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte200bobClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte200bobMarketplaceprice = round(i['SITE'], 2);
+        fonte200bobMarketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte200bobClassico = round(i['COLUNA5'], 2) - 0.01;
+        fonte200bobPremium = round(i['COLUNA7'], 2) - 0.01;
+        fonte200bobPremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte200bobClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte200bobMarketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 200A LITE":
-        fonte200liteMarketplace = round(i['COLUNA3'], 2);
-        fonte200liteClassico = round(i['COLUNA5'], 2);
-        fonte200litePremium = round(i['COLUNA7'], 2);
-        fonte200litePremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte200liteClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte200liteMarketplaceprice = round(i['SITE'], 2);
+        fonte200liteMarketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte200liteClassico = round(i['COLUNA5'], 2) - 0.01;
+        fonte200litePremium = round(i['COLUNA7'], 2) - 0.01;
+        fonte200litePremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte200liteClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte200liteMarketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 200 MONO":
-        fonte200monoMarketplace = round(i['COLUNA3'], 2);
-        fonte200monoClassico = round(i['COLUNA5'], 2);
-        fonte200monoPremium = round(i['COLUNA7'], 2);
-        fonte200monoPremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte200monoClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte200monoMarketplaceprice = round(i['SITE'], 2);
+        fonte200monoMarketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte200monoClassico = round(i['COLUNA5'], 2) - 0.01;
+        fonte200monoPremium = round(i['COLUNA7'], 2) - 0.01;
+        fonte200monoPremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte200monoClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte200monoMarketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 200A":
-        fonte200Marketplace = round(i['COLUNA3'], 2);
-        fonte200Classico = round(i['COLUNA5'], 2);
-        fonte200Premium = round(i['COLUNA7'], 2);
-        fonte200PremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte200ClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte200Marketplaceprice = round(i['SITE'], 2);
+        fonte200Marketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte200Classico = round(i['COLUNA5'], 2) - 0.01;
+        fonte200Premium = round(i['COLUNA7'], 2) - 0.01;
+        fonte200PremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte200ClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte200Marketplaceprice = round(i['SITE'], 2) - 0.01;
         
 for index, i in db.iterrows():
     if i['PRODUTO'] == "FONTE 40A":
-        fonte40Marketplace = round(i['COLUNA3'], 2);
-        fonte40Classico = round(i['COLUNA5'], 2);
-        fonte40Premium = round(i['COLUNA7'], 2);
-        fonte40PremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte40ClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte40Marketplaceprice = round(i['SITE'], 2);
+        fonte40Marketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte40Classico = round(i['COLUNA5'], 2) - 0.01;
+        fonte40Premium = round(i['COLUNA7'], 2) - 0.01;
+        fonte40PremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte40ClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte40Marketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 60A":
-        fonte60Marketplace = round(i['COLUNA3'], 2);
-        fonte60Classico = round(i['COLUNA5'], 2);
-        fonte60Premium = round(i['COLUNA7'], 2);
-        fonte60PremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte60ClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte60Marketplaceprice = round(i['SITE'], 2);
+        fonte60Marketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte60Classico = round(i['COLUNA5'], 2) - 0.01;
+        fonte60Premium = round(i['COLUNA7'], 2) - 0.01;
+        fonte60PremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte60ClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte60Marketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 60A LITE":
-        fonte60liteMarketplace = round(i['COLUNA3'], 2);
-        fonte60liteClassico = round(i['COLUNA5'], 2);
-        fonte60litePremium = round(i['COLUNA7'], 2);
-        fonte60litePremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte60liteClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte60liteMarketplaceprice = round(i['SITE'], 2);
+        fonte60liteMarketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte60liteClassico = round(i['COLUNA5'], 2) - 0.01;
+        fonte60litePremium = round(i['COLUNA7'], 2) - 0.01;
+        fonte60litePremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte60liteClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte60liteMarketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 70A":
-        fonte70Marketplace = round(i['COLUNA3'], 2);
-        fonte70Classico = round(i['COLUNA5'], 2);
-        fonte70Premium = round(i['COLUNA7'], 2);
-        fonte70PremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte70ClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte70Marketplaceprice = round(i['SITE'], 2);
+        fonte70Marketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte70Classico = round(i['COLUNA5'], 2) - 0.01;
+        fonte70Premium = round(i['COLUNA7'], 2) - 0.01;
+        fonte70PremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte70ClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte70Marketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 70A LITE":
-        fonte70liteMarketplace = round(i['COLUNA3'], 2);
-        fonte70liteClassico = round(i['COLUNA5'], 2);
-        fonte70litePremium = round(i['COLUNA7'], 2);
-        fonte70litePremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte70liteClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte70liteMarketplaceprice = round(i['SITE'], 2);
+        fonte70liteMarketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte70liteClassico = round(i['COLUNA5'], 2) - 0.01;
+        fonte70litePremium = round(i['COLUNA7'], 2) - 0.01;
+        fonte70litePremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte70liteClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte70liteMarketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 90 BOB":
-        fonte90bobMarketplace = round(i['COLUNA3'], 2);
-        fonte90bobClassico = round(i['COLUNA5'], 2);
-        fonte90bobPremium = round(i['COLUNA7'], 2);
-        fonte90bobPremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte90bobClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte90bobMarketplaceprice = round(i['SITE'], 2);
+        fonte90bobMarketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte90bobClassico = round(i['COLUNA5'], 2) - 0.01;
+        fonte90bobPremium = round(i['COLUNA7'], 2) - 0.01;
+        fonte90bobPremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte90bobClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte90bobMarketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 120 BOB":
-        fonte120bobMarketplace = round(i['COLUNA3'], 2);
-        fonte120bobClassico = round(i['COLUNA5'], 2);
-        fonte120bobPremium = round(i['COLUNA7'], 2);
-        fonte120bobPremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte120bobClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte120bobMarketplaceprice = round(i['SITE'], 2);
+        fonte120bobMarketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte120bobClassico = round(i['COLUNA5'], 2) - 0.01;
+        fonte120bobPremium = round(i['COLUNA7'], 2) - 0.01;
+        fonte120bobPremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte120bobClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte120bobMarketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 120A LITE":
-        fonte120liteMarketplace = round(i['COLUNA3'], 2);
-        fonte120liteClassico = round(i['COLUNA5'], 2);
-        fonte120litePremium = round(i['COLUNA7'], 2);
-        fonte120litePremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte120liteClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte120liteMarketplaceprice = round(i['SITE'], 2);
+        fonte120liteMarketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte120liteClassico = round(i['COLUNA5'], 2) - 0.01;
+        fonte120litePremium = round(i['COLUNA7'], 2) - 0.01;
+        fonte120litePremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte120liteClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte120liteMarketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 120A":
-        fonte120Marketplace = round(i['COLUNA3'], 2);
-        fonte120Classico = round(i['COLUNA5'], 2);
-        fonte120Premium = round(i['COLUNA7'], 2);
-        fonte120PremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte120ClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte120Marketplaceprice = round(i['SITE'], 2);
+        fonte120Marketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte120Classico = round(i['COLUNA5'], 2) - 0.01;
+        fonte120Premium = round(i['COLUNA7'], 2) - 0.01;
+        fonte120PremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte120ClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte120Marketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 200 BOB":
-        fonte200bobMarketplace = round(i['COLUNA3'], 2);
-        fonte200bobClassico = round(i['COLUNA5'], 2);
-        fonte200bobPremium = round(i['COLUNA7'], 2);
-        fonte200bobPremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte200bobClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte200bobMarketplaceprice = round(i['SITE'], 2);
+        fonte200bobMarketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte200bobClassico = round(i['COLUNA5'], 2) - 0.01;
+        fonte200bobPremium = round(i['COLUNA7'], 2) - 0.01;
+        fonte200bobPremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte200bobClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte200bobMarketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 200A LITE":
-        fonte200liteMarketplace = round(i['COLUNA3'], 2);
-        fonte200liteClassico = round(i['COLUNA5'], 2);
-        fonte200litePremium = round(i['COLUNA7'], 2);
-        fonte200litePremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte200liteClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte200liteMarketplaceprice = round(i['SITE'], 2);
+        fonte200liteMarketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte200liteClassico = round(i['COLUNA5'], 2) - 0.01;
+        fonte200litePremium = round(i['COLUNA7'], 2) - 0.01;
+        fonte200litePremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte200liteClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte200liteMarketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 200 MONO":
-        fonte200monoMarketplace = round(i['COLUNA3'], 2);
-        fonte200monoClassico = round(i['COLUNA5'], 2);
-        fonte200monoPremium = round(i['COLUNA7'], 2);
-        fonte200monoPremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte200monoClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte200monoMarketplaceprice = round(i['SITE'], 2);
+        fonte200monoMarketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte200monoClassico = round(i['COLUNA5'], 2) - 0.01;
+        fonte200monoPremium = round(i['COLUNA7'], 2) - 0.01;
+        fonte200monoPremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte200monoClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte200monoMarketplaceprice = round(i['SITE'], 2) - 0.01;
     elif i['PRODUTO'] == "FONTE 200A":
-        fonte200Marketplace = round(i['COLUNA3'], 2);
-        fonte200Classico = round(i['COLUNA5'], 2);
-        fonte200Premium = round(i['COLUNA7'], 2);
-        fonte200PremiumPrice = round(i['PREMIUM ML'], 2);
-        fonte200ClassicoPrice = round(i['CLÁSSICO ML'], 2);
-        fonte200Marketplaceprice = round(i['SITE'], 2);
+        fonte200Marketplace = round(i['COLUNA3'], 2) - 0.01;
+        fonte200Classico = round(i['COLUNA5'], 2) - 0.01;
+        fonte200Premium = round(i['COLUNA7'], 2) - 0.01;
+        fonte200PremiumPrice = round(i['PREMIUM ML'], 2) - 0.01;
+        fonte200ClassicoPrice = round(i['CLÁSSICO ML'], 2) - 0.01;
+        fonte200Marketplaceprice = round(i['SITE'], 2) - 0.01;
         
 #"search_filters": "BRAND=2466336@category=MLB3381@", #MLB2227, 22292586
 
@@ -240,6 +240,12 @@ options_req = [
 url = "https://app.nubimetrics.com/api/search/items"
 
 
+def get_description(mlb):
+    try:
+        response = requests.get(f"https://api.mercadolibre.com/items/{mlb}/description")
+        return response.json()['plain_text']
+    except: 
+        return ""
 
 service = Service()
 options = webdriver.ChromeOptions()
@@ -277,7 +283,6 @@ except NoSuchElementException as e:
 except WebDriverException as e:
     print(f"Erro no WebDriver: {e}")
 
-driver.get("https://app.nubimetrics.com/search/layout#?op1=q-searchTypeOption3-icPubliActivas&op2=fonte%2060a%20jfa&category=")
 
 time.sleep(5)
 cookies_list = []
@@ -616,6 +621,9 @@ for option in tqdm(options_req):
                                 item['real_price_previsto'] = fonte200PremiumPrice
                                 if real_price is not None:
                                     if real_price < fonte200PremiumPrice:
+                                        description = get_description(item['id'])
+                                        if "lite" in description.lower() or "bob" in description.lower():
+                                            continue
                                         all_filtered_results.append(item)
                                 else:
                                     all_filtered_results.append(item)
@@ -629,6 +637,9 @@ for option in tqdm(options_req):
                                     if real_price < fonte200ClassicoPrice:
                                         all_filtered_results.append(item)
                                 else:
+                                    description = get_description(item['id'])
+                                    if "lite" in description.lower() or "bob" in description.lower():
+                                        continue
                                     all_filtered_results.append(item)
 
                 elif option == "FONTE 200A LITE":
@@ -811,25 +822,14 @@ for option in tqdm(options_req):
                 break
 
 def get_loja(loja):
-    # Formatar a URL com o nome da loja
-    location_url = f'https://www.mercadolivre.com.br/perfil/{loja.replace(" ", "+")}'
+    response = requests.get(f"https://api.mercadolibre.com/sites/MLB/search?nickname={loja}")
+    user_id = response.json()['results'][0]['seller']['id']
+    user_response = requests.get(f"https://api.mercadolibre.com/users/{user_id}")
+    address = user_response.json()['address']['city']
+    state = user_response.json()['address']['state']
+    return address + " - " + state
     
-    # Fazer a requisição HTTP
-    response = requests.get(location_url)
     
-    if response.status_code == 200:
-        # Parsear o conteúdo HTML da resposta
-        tree = html.fromstring(response.content)
-        
-        # Extrair o texto do elemento especificado pelo XPath
-        loja_info = tree.xpath('//*[@id="profile"]/div/div[2]/div[1]/div[3]/p/font/font/text()')
-        
-        if loja_info:
-            return loja_info[0].strip() 
-        else:
-            return "Informação não encontrada"
-    else:
-        return f"Erro ao acessar a página: {response.status_cod}"
     
 
 def get_greeting():
